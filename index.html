@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM M FAVICON (Black M on Beige Background) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23F7F1E8'/><text x='50' y='76' font-family='Arial, sans-serif' font-weight='bold' font-size='75' fill='%23252525' text-anchor='middle'>M</text></svg>">
 
     <!-- SEO -->
     <meta name="description" content="Mehwish — Admin and Operations Virtual Assistant portfolio showcasing projects and skills.">
@@ -29,7 +33,29 @@
         color: #252525;
         overflow-x: hidden;
     }
-    img { max-width: 100%; display: block; }
+    
+    /* =========================================================
+       EMPTY MEDIA STYLING (So it doesn't look broken)
+    ========================================================= */
+    img {
+        width: 100%;
+        min-height: 250px;
+        background-color: #EFE8DD;
+        border: 2px dashed #DDD5C9;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #84947D;
+        font-weight: 600;
+        text-align: center;
+        padding: 20px;
+        object-fit: cover;
+    }
+    .hero-avatar img { min-height: 360px; border-radius: 50%; }
+    .about-image img { min-height: 400px; }
+    .resume-paper img { min-height: 300px; }
+
     a { color: inherit; text-decoration: none; }
     button, input, textarea { font: inherit; }
     section[id] { scroll-margin-top: 80px; }
@@ -139,24 +165,6 @@
     .hero-description { max-width: 620px; font-size: 1.1rem; color: var(--text-light); margin-bottom: 35px; }
     .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 25px; }
     .availability { font-size: 0.85rem; color: var(--text-light); }
-
-    /* Placeholder image styling */
-    .hero-avatar img, .about-image img, .resume-paper img {
-        width: 100%;
-        min-height: 350px;
-        background-color: #EFE8DD;
-        border: 2px dashed #DDD5C9;
-        border-radius: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #84947D;
-        font-weight: 600;
-        text-align: center;
-        padding: 20px;
-        object-fit: cover;
-    }
-    .hero-avatar img { border-radius: 50%; min-height: 400px; }
 
     /* =========================================================
        CAPABILITIES
@@ -337,30 +345,27 @@
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="#home" class="logo">
+            <a href="index.html" class="logo">
                 <span>Mehwish</span>
             </a>
 
             <nav class="nav-links" id="main-nav" aria-label="Main navigation">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
                 <div class="nav-dropdown">
-                    <a href="#portfolio" class="dropdown-toggle">Portfolio</a>
+                    <a href="portfolio.html" class="dropdown-toggle">Portfolio</a>
                     <div class="dropdown-menu">
-                        <a href="#section-1">Creator &amp; Online Business Support</a>
-                        <a href="#section-2">Admin &amp; Operations Systems</a>
-                        <a href="#section-3">Data, Reporting &amp; Research</a>
+                        <a href="portfolio.html#section-1">Creator &amp; Online Business Support</a>
+                        <a href="portfolio.html#section-2">Admin &amp; Operations Systems</a>
+                        <a href="portfolio.html#section-3">Data, Reporting &amp; Research</a>
                     </div>
                 </div>
-                <a href="#tools">Tools</a>
-                <a href="#resume">Resume</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#tools">Tools</a>
+                <a href="index.html#resume">Resume</a>
+                <a href="index.html#contact">Contact</a>
                 <a href="https://calendly.com/mehwishasghar958/new-meeting" target="_blank" rel="noopener noreferrer" class="button button-primary nav-cta">Book a Call</a>
             </nav>
 
@@ -370,9 +375,6 @@
 
     <main id="main-content">
 
-        <!-- =====================================================
-             HERO / HOME
-        ====================================================== -->
         <section id="home" class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
@@ -385,7 +387,7 @@
                         doing what only you can do.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#portfolio" class="button button-primary">View My Work</a>
+                        <a href="portfolio.html" class="button button-primary">View My Work</a>
                         <a href="https://calendly.com/mehwishasghar958/new-meeting" target="_blank" rel="noopener noreferrer" class="button button-secondary">Book a Free 15-Min Call</a>
                     </div>
                     <p class="availability">
@@ -400,9 +402,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             WHAT I CAN HELP WITH (CAPABILITIES)
-        ====================================================== -->
         <section class="capabilities">
             <div class="container">
                 <div class="section-heading">
@@ -459,9 +458,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             ABOUT
-        ====================================================== -->
         <section id="about" class="about section">
             <div class="container about-container">
                 <div class="about-image">
@@ -502,9 +498,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             SERVICES
-        ====================================================== -->
         <section id="services" class="services section section-light">
             <div class="container">
                 <div class="section-heading">
@@ -574,23 +567,17 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             PORTFOLIO PREVIEW
-        ====================================================== -->
         <section class="portfolio-preview section">
             <div class="container">
                 <div class="section-heading">
                     <p class="eyebrow">MY WORK</p>
                     <h2>See what I can do.</h2>
                     <p>Explore my sample projects and see how I approach data management, research, organization, and administrative support.</p>
-                    <a href="#portfolio" class="button button-primary">View My Portfolio</a>
+                    <a href="portfolio.html" class="button button-primary">View My Portfolio</a>
                 </div>
             </div>
         </section>
 
-        <!-- =====================================================
-             WORKFLOW
-        ====================================================== -->
         <section class="workflow section section-light">
             <div class="container">
                 <div class="section-heading">
@@ -638,9 +625,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             TOOLS
-        ====================================================== -->
         <section id="tools" class="tools section">
             <div class="container">
                 <div class="section-heading">
@@ -688,9 +672,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             RESUME
-        ====================================================== -->
         <section id="resume" class="resume section section-light">
             <div class="container resume-container">
                 <div class="resume-content">
@@ -710,9 +691,6 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             CONTACT
-        ====================================================== -->
         <section id="contact" class="contact section">
             <div class="container contact-container">
                 <div class="contact-content">
@@ -786,20 +764,17 @@
 
     </main>
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
     <footer class="footer">
         <div class="container footer-container">
             <div>
-                <a href="#home" class="logo"><span>Mehwish</span></a>
+                <a href="index.html#home" class="logo"><span>Mehwish</span></a>
                 <p>Admin & Operations VA for Creators and Online Businesses</p>
             </div>
 
             <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#home">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
                 <a href="https://www.instagram.com/12___________mimi46" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <a href="https://www.linkedin.com/in/mehwish-asghar-aba1ba385/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="https://calendly.com/mehwishasghar958/new-meeting" target="_blank" rel="noopener noreferrer">Book a Call</a>
